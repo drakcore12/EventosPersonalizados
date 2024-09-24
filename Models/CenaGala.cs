@@ -37,7 +37,6 @@ namespace EventosPersonalizados.Models
             // Validación según regla 9
             if (costoTotal < 100)
                 throw new InvalidOperationException("El costo total debe ser al menos de $100.");
-                costoTotal = 100;
 
             return costoTotal;
         }
