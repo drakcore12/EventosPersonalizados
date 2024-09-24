@@ -13,10 +13,9 @@ namespace EventosPersonalizados.Models
 
         public override double CalcularCostoDecoracion()
         {
-            double costoBase = 50 + TamanoTorta * 10;
-            double costoAdicional = Decora ? 100 : 0;
+            double costoAdicional = Decora ? (10*NumeroDePersonas) : 0;
 
-            return costoBase + costoAdicional;
+            return costoAdicional;
         }
 
         public override double CalcularCosto()
