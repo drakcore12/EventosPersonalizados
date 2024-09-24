@@ -26,7 +26,7 @@ namespace EventosPersonalizados.Models
                 throw new ArgumentException("Costo promedio por persona inválido.");
 
             if (OpcionSaludable && CostoPersona <= 50)
-                throw new InvalidOperationException("Opción saludable no disponible para este costo.");
+                throw new InvalidOperationException("Opción saludable no disponible para un costo menor de 50.");
 
             // Cálculos
             double costoComida = NumeroDePersonas * CostoPersona;
@@ -46,7 +46,7 @@ namespace EventosPersonalizados.Models
         public void SetOpcionSaludable(bool valor)
         {
             if (valor && CostoPersona <= 50)
-                throw new InvalidOperationException("Opción saludable no disponible para este costo promedio.");
+                throw new InvalidOperationException("Opción saludable no disponible para un costo menor de 50.");
             OpcionSaludable = valor;
         }
     }
